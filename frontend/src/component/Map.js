@@ -33,7 +33,7 @@ const Map = () => {
         return;
       }
       try {
-        const res = await fetch("http://localhost:4000/api/map/getallpoints", {
+        const res = await fetch("https://mappin-pzu8.onrender.com/api/map/getallpoints", {
           headers: {
             "auth-token": token,
           },
@@ -62,7 +62,7 @@ const Map = () => {
   //  Define the handleRemove function
   const handleRemove = async (itemId) => {
     try {
-      const response = await fetch(`http://localhost:4000/api/map/deletepoint/${itemId}`, {
+      const response = await fetch(`https://mappin-pzu8.onrender.com/api/map/deletepoint/${itemId}`, {
       method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ const Map = () => {
   };
 
   const isAddingPoint = new URLSearchParams(location.search).get("mode") === "add";
-  console.log("adding point", isAddingPoint)
+  // console.log("adding point", isAddingPoint)
 
   if (!isLoaded) {
     return <div>Loading Map...</div>;

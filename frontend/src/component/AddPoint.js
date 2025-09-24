@@ -66,8 +66,8 @@ const AddPoint = () => {
     });
 
     const url = mode === 'edit'
-      ? `http://localhost:4000/api/map/updatepoint/${id}`
-      : 'http://localhost:4000/api/map/addpoint';
+      ? `https://mappin-pzu8.onrender.com/api/map/updatepoint/${id}`
+      : 'https://mappin-pzu8.onrender.com/api/map/addpoint';
 
     const method = mode === 'edit' ? 'PUT' : 'POST';
 
